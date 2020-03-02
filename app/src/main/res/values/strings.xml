@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TakeMyText</string>
+    <string name="title">Nadpis</string>
+    <string name="hello_word">Hello World!!!</string>
+    <string name="category">Category:</string>
+    <string name="date">Date:</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="age_control">Bylo vám 18?</string>
+    <string name="pick_time">Select date</string>
 </resources>

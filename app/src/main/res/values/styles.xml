@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+<<<<<<< HEAD
     <style name="TextLabel" parent="Widget.AppCompat.TextView">
         <item name="android:textColor">@color/white</item>
     </style>
@@ -17,4 +18,13 @@
         <item name="android:backgroundTint">@color/colorPrimary</item>
         <item name="android:textColor">@color/white</item>
     </style>
+=======
+    <style name="PrimaryButton" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+>>>>>>> c07c717b0a696fcf1c4152f73038ebcf413f4065
 </resources>

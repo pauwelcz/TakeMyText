@@ -12,9 +12,15 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
         <activity
+<<<<<<< HEAD
             android:name=".ui.DetailActiviry"
             android:screenOrientation="portrait">
+=======
+            android:name=".ui.detail.DetailActivity"
+            android:screenOrientation="portrait"/>
+>>>>>>> c07c717b0a696fcf1c4152f73038ebcf413f4065
 
+        <activity android:name=".ui.list.ListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

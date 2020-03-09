@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 package cz.muni.takemytext.ui
 
+=======
+package cz.muni.takemytext.ui.detail
+
+import android.app.DatePickerDialog
+>>>>>>> c07c717b0a696fcf1c4152f73038ebcf413f4065
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -8,11 +14,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+<<<<<<< HEAD
 import androidx.fragment.app.Fragment
 import cz.muni.takemytext.R
 import kotlinx.android.synthetic.main.fragment_detail.view.*
 
 class DetalFragment: Fragment() {
+=======
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import cz.muni.takemytext.R
+import cz.muni.takemytext.extension.toPresentableDate
+import kotlinx.android.synthetic.main.fragment_detail.view.*
+import java.util.*
+
+class DetailFragment : Fragment() {
+>>>>>>> c07c717b0a696fcf1c4152f73038ebcf413f4065
 
     var text = ""
 
@@ -29,6 +46,7 @@ class DetalFragment: Fragment() {
                 Log.d("DETAIL_FRAGMENT", text)
             }
 
+<<<<<<< HEAD
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
 
@@ -52,4 +70,51 @@ class DetalFragment: Fragment() {
         // return super.onCreateView(inflater, container, savedInstanceState)
     }
 
+=======
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+        })
+
+        view.date_text_view.text = System.currentTimeMillis().toPresentableDate()
+        context?.let { context ->
+            view.date_text_view.setOnClickListener {
+                DatePickerDialog(
+                    context,
+                    DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
+                        val dateMillis = Calendar.getInstance().apply {
+                            set(Calendar.YEAR, year)
+                            set(Calendar.MONTH, month)
+                            set(Calendar.DAY_OF_MONTH, dayOfMonth)
+                        }.timeInMillis
+
+                        view.date_text_view.text = dateMillis.toPresentableDate()
+                    },
+                    Calendar.getInstance().get(Calendar.YEAR),
+                    Calendar.getInstance().get(Calendar.MONTH),
+                    Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
+                ).show()
+            }
+        }
+
+        val categoryArray = arrayOf("Doma", "Práce", "Osobní")
+        context?.let { context ->
+            view.category_spinner.adapter =
+                ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, categoryArray)
+        }
+
+        val usersSpinner = arrayOf("Honza", "Anna", "Bára")
+        context?.let { context ->
+            view.users_spinner.adapter =
+                ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, usersSpinner)
+        }
+
+        view.save_button.setOnClickListener {
+            Toast.makeText(context, text, Toast.LENGTH_LONG).show()
+//            Log.d("DETAIL_FRAGMENT", "on button clicked ${text.length}")
+        }
+
+        return view
+    }
+>>>>>>> c07c717b0a696fcf1c4152f73038ebcf413f4065
 }

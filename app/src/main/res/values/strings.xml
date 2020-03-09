@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">TakeMyText</string>
+<<<<<<< HEAD
     <string name="title">Nadpis</string>
     <string name="hello_word">Hello World!!!</string>
     <string name="category">Category:</string>
@@ -8,4 +9,14 @@
     <string name="no">No</string>
     <string name="age_control">Bylo vám 18?</string>
     <string name="pick_time">Select date</string>
+=======
+
+    <string name="title">Nadpis</string>
+    <string name="category">Kategorie</string>
+    <string name="users">Uživatelé</string>
+    <string name="save_note">Save note</string>
+    <string name="choose_date">Save note</string>
+    <string name="date">Datum</string>
+    <string name="add">Přidat</string>
+>>>>>>> c07c717b0a696fcf1c4152f73038ebcf413f4065
 </resources>
